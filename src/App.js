@@ -108,6 +108,8 @@ function reducer(state, { type, payload }) {
         operation: payload.operation,
         currentOperand: null,
       };
+      default :
+        console.log("default case")
   }
 }
 
@@ -129,6 +131,8 @@ function evaluete({ currentOperand, previousOperand, operation }) {
     case "÷":
       computation = prev / current;
       break;
+      default :
+      console.log("default case")
   }
 
   return computation.toString();
